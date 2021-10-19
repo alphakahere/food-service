@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import all from '../public/assets/categories/all.jpg'
 
 export default function Home() {
   return (
-		<div className="px-10 bg-yellow-200">
+		<div className="px-10 py-5">
 			<Head>
 				<title>Food Delivery Service</title>
 				<meta
@@ -12,9 +14,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<header className="">
-				<nav>
+				<nav className="flex justify-between items-center">
 					<svg
-						className="w-12 h-12 text-4xl"
+						className="w-8 h-8"
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
@@ -27,16 +29,55 @@ export default function Home() {
 							d="M4 6h16M4 12h16M4 18h16"
 						></path>
 					</svg>
-          <h1> <span>Order</span> Something</h1>
-          <div>
-            <input type="text" placeholder="Search"/>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
+					<h1 className="text-xl">
+						<span className="font-bold text-3xl">Order</span> Something
+					</h1>
+					<div className="relative">
+						<input type="text" placeholder="Search"
+							className="bg-gray-100 w-80 h-10 rounded-lg px-3 placeholder-gray-400 font-medium"
+						/>
+						<svg className="w-5 h-5 absolute bottom-2 left-72 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+						</svg>
+					</div>
 				</nav>
 			</header>
-			<main className="">main</main>
+			<main className="my-8">
+				{/* Categories */}
+				<div className="flex justify-between items-center w-2/3">
+					<div className="flex flex-col justify-center items-center bg-gray-50 border border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">All</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">Pizza</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>						<h5 className="mt-2 text-sm font-medium text-center">Burger</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">Sushi</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">Meat</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">Fruits</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<Image src={all} alt="all" width={30} height={30} className="rounded"/>
+						<h5 className="mt-2 text-sm font-medium text-center">Pasta</h5>
+					</div>
+					<div className="flex flex-col justify-center items-center border bg-gray-50 border border-gray-300 px-5 pt-2 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+						<h1 className="text-3xl font-bold text-yellow-500">+</h1>
+						<h5 className="text-sm font-medium text-center">More</h5>
+					</div>
+				</div>
+			</main>
 
 			<footer className="">Build by alpha69</footer>
 		</div>
