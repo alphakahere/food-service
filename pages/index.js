@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 import Header from './components/Header'
 import Category from './components/Category'
-import all from '../public/assets/categories/all.jpg'
 import avatar from '../public/assets/categories/avatar.png'
 import DisheItem from './components/DisheItem'
 import OrderItem from './components/OrderItem'
@@ -24,18 +23,18 @@ export default function Home() {
 				<main className="my-8">
 					{/* Categories */}
 					<div className="flex justify-between items-center w-full">
-						<Category name="All" />
-						<Category name="Pizza" />
-						<Category name="Burger" />
-						<Category name="Sushi" />
-						<Category name="Meat" />
-						<Category name="Fruits" />
-						<Category name="Pasta" />
-						<Category name="Tacos" />
-						<Category name="Sandwich" />
-						<Category name="Beef" />
-						<Category name="Salad" />
-						<Category name="Drinks" />
+						<Category name="All" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"/>
+						<Category name="Pizza" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Burger" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Sushi" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Meat" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Fruits" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Pasta" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Tacos" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Sandwich" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Beef" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Salad" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
+						<Category name="Drinks" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
 						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-2 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
 							<h1 className="text-3xl font-bold text-yellow-500">+</h1>
 							<h5 className="text-sm font-medium text-center">More</h5>

@@ -8,7 +8,7 @@ const OrderItem = ({ number, dish, price }) => {
 			<div className="flex items-center">
 				<Image
 					src={all}
-					alt="classic"
+					alt={dish}
 					className=" rounded-3xl"
 					width={90}
 					height={60}
