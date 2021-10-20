@@ -1,12 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
+import Header from './components/Header'
+import Category from './components/Category'
 import all from '../public/assets/categories/all.jpg'
 import avatar from '../public/assets/categories/avatar.png'
+import DisheItem from './components/DisheItem'
+import OrderItem from './components/OrderItem'
 
 export default function Home() {
   return (
 	  	<div className="flex">	
-			<div className="w-9/12 bg-gray-50 px-10 pt-5 py-20">
+			<div className="w-9/12 bg-gray-50 px-10 pt-5 py-10">
 				<Head>
 					<title>Food Delivery Service</title>
 					<meta
@@ -15,67 +20,22 @@ export default function Home() {
 					/>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<header className="">
-					<nav className="flex justify-between items-center">
-						<div className="flex items-center">
-							<svg
-								className="w-8 h-8"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWwidth="2"
-									d="M4 6h16M4 12h16M4 18h16"
-								></path>
-							</svg>
-							<h1 className="text-xl ml-6">
-								<span className="font-bold text-3xl">Order</span> Something
-							</h1>
-						</div>
-						<div className="relative">
-							<input type="text" placeholder="Search"
-								className="bg-gray-100 w-80 h-10 rounded-lg px-3 placeholder-gray-400 font-medium outline-none"
-							/>
-							<svg className="w-5 h-5 absolute bottom-2 left-72 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-							</svg>
-						</div>
-					</nav>
-				</header>
+				<Header />
 				<main className="my-8">
 					{/* Categories */}
 					<div className="flex justify-between items-center w-full">
-						<div className="flex flex-col justify-center items-center bg-gray-50 border border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">All</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">Pizza</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>						<h5 className="mt-2 text-sm font-medium text-center">Burger</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">Sushi</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">Meat</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">Fruits</h5>
-						</div>
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-5 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<Image src={all} alt="all" width={30} height={30} className="rounded"/>
-							<h5 className="mt-2 text-sm font-medium text-center">Pasta</h5>
-						</div>
+						<Category name="All" />
+						<Category name="Pizza" />
+						<Category name="Burger" />
+						<Category name="Sushi" />
+						<Category name="Meat" />
+						<Category name="Fruits" />
+						<Category name="Pasta" />
+						<Category name="Tacos" />
+						<Category name="Sandwich" />
+						<Category name="Beef" />
+						<Category name="Salad" />
+						<Category name="Drinks" />
 						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-2 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
 							<h1 className="text-3xl font-bold text-yellow-500">+</h1>
 							<h5 className="text-sm font-medium text-center">More</h5>
@@ -85,47 +45,14 @@ export default function Home() {
 					<div className="mt-12" id="dishes">
 						<h1 className="text-2xl font-normal leading-8 mb-5">Popular dishes</h1>
 						<div className="grid grid-cols-4 gap-8">
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-							<div className="flex flex-col justify-center mb-3">
-								<Image src={all} alt="classic" className=" rounded-3xl" width={290} height={170}/>
-								<h3 className="mt-3 text-sm leading-6 font-medium">Classic Caesar Salad</h3>
-								<h5 className="text-gray-400 text-sm">&#9733; <span className="text-black font-medium">4.5 </span>&#183; Deep Cafe &#183; Salad</h5>
-							</div>
-													
+							<DisheItem name="Classic Caesar Salad" avg="4.5" base="Deep Cafe" category="Salad"/>
+							<DisheItem name="Pizza Margherita" avg="4.0" base="Neopolitan" category="Pizza"/>
+							<DisheItem name="Muesli with Mango" avg="5.0" base="Vegas" category="Fruits"/>
+							<DisheItem name="Avocado and Egg Sandwich" avg="4.0" base="Vegan Cafe" category="Sandwich"/>
+							<DisheItem name="Avocado Pesto Pasta" avg="5.0" base="Cafetaria" category="Pasta"/>
+							<DisheItem name="Burger with Hamon" avg="4.0" base="Beefer Club" category="Burger"/>
+							<DisheItem name="Greek Salad" avg="4.5" base="Deep Cafe" category="Salad"/>
+							<DisheItem name="Beef Steak" avg="4.5" base="Deep Cafe" category="Salad" />							
 						</div>
 					</div>
 				</main>
@@ -134,7 +61,7 @@ export default function Home() {
 				<div className="flex">
 					<div className="mr-5 bg-yellow-100 w-14 h-14 flex items-center justify-center relative rounded-lg">
 						<svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path strokeLinecap="round" strokeLlinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
 						</svg>
 						<h6 className="px-2 text-white rounded-lg absolute bottom-10 left-10 text-sm font-medium" style={{background:'#2eb82e'}}>4</h6>
 					</div>
@@ -151,22 +78,10 @@ export default function Home() {
 						</svg>
 					</div>
 					<div className="mt-5 border-b-2 border-dashed pb-2">
-						<div className="flex items-center mb-6">
-							<Image src={all} alt="classic" className=" rounded-3xl" width={100} height={60}/>
-							<h5>1 <span>x</span> Greek Salad <span>CFA34</span></h5>
-						</div>
-						<div className="flex items-center mb-6">
-							<Image src={all} alt="classic" className=" rounded-3xl" width={100} height={60}/>
-							<h5>1 <span>x</span> Greek Salad <span>CFA34</span></h5>
-						</div>
-						<div className="flex items-center mb-6">
-							<Image src={all} alt="classic" className=" rounded-3xl" width={100} height={60}/>
-							<h5>1 <span>x</span> Greek Salad <span>CFA34</span></h5>
-						</div>
-						<div className="flex items-center mb-6">
-							<Image src={all} alt="classic" className=" rounded-3xl" width={100} height={60}/>
-							<h5>1 <span>x</span> Greek Salad <span>C34</span></h5>
-						</div>
+						<OrderItem number="1" dish="Greek Salad" price="34"/>
+						<OrderItem number="2" dish="Grilled Fish" price="52"/>
+						<OrderItem number="1" dish="Beef Steak" price="48"/>
+						<OrderItem number="1" dish="Ramen" price="29"/>
 					</div>
 					<div className="mt-8">
 						<div className="flex items-center justify-between">
@@ -178,10 +93,10 @@ export default function Home() {
 								</div>
 								<div className="text-sm font-medium">
 									<h4 className="leading-6">Delivery</h4>
-									<h4 className="text-yellow-400">30-40min</h4>
+									<h4 className="text-yellow-400 opacity-75">30-40min</h4>
 								</div>
 							</div>
-							<p>CFA50</p>
+							<p className="text-sm font-medium opacity-50">CFA50</p>
 						</div>
 					</div>
 					<div className="mt-12 flex items-center justify-between font-medium">
