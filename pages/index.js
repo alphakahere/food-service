@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 
-import Header from './components/Header'
-import Category from './components/Category'
-import avatar from '../public/assets/categories/avatar.png'
-import DisheItem from './components/DisheItem'
-import OrderItem from './components/OrderItem'
+import Header from "./components/Header";
+import Category from "./components/Category";
+import avatar from "../public/assets/categories/avatar.png";
+import DisheItem from "./components/DisheItem";
+import OrderItem from "./components/OrderItem";
 
 export default function Home() {
-  return (
-	  	<div className="flex">	
-			<div className="w-9/12 bg-gray-50 px-10 pt-5 py-10">
+	return (
+		<div className="relative md:flex">
+			<div className="w-full md:w-8/12 xl:w-9/12 bg-gray-50 px-10 pt-5 py-10">
 				<Head>
 					<title>Food Delivery Service</title>
 					<meta
@@ -22,91 +22,251 @@ export default function Home() {
 				<Header />
 				<main className="my-8">
 					{/* Categories */}
-					<div className="flex justify-between items-center w-full">
-						<Category name="All" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"/>
-						<Category name="Pizza" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Burger" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Sushi" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Meat" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Fruits" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Pasta" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Tacos" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Sandwich" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Beef" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Salad" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<Category name="Drinks" urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg" />
-						<div className="flex flex-col justify-center items-center border bg-gray-50 border-gray-300 px-5 pt-2 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
-							<h1 className="text-3xl font-bold text-yellow-500">+</h1>
-							<h5 className="text-sm font-medium text-center">More</h5>
+					<div className="flex items-center flex-wrap w-full">
+						<Category
+							name="All"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Pizza"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Burger"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Sushi"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Meat"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Fruits"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Pasta"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Tacos"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Sandwich"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Beef"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Salad"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<Category
+							name="Drinks"
+							urlimage="https://image.freepik.com/free-photo/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg"
+						/>
+						<div className="flex flex-col justify-center items-center mr-2 mb-5  border bg-gray-50 border-gray-300 px-5 pt-2 pb-2 rounded-xl w-20 h-24 hover:border-green-600 transition-all ease-in">
+							<h1 className="text-3xl font-bold text-yellow-500">
+								+
+							</h1>
+							<h5 className="text-sm font-medium text-center">
+								More
+							</h5>
 						</div>
 					</div>
 					{/* Popular dishes */}
 					<div className="mt-12" id="dishes">
-						<h1 className="text-2xl font-normal leading-8 mb-5">Popular dishes</h1>
-						<div className="grid grid-cols-4 gap-8">
-							<DisheItem name="Classic Caesar Salad" avg="4.5" base="Deep Cafe" category="Salad"/>
-							<DisheItem name="Pizza Margherita" avg="4.0" base="Neopolitan" category="Pizza"/>
-							<DisheItem name="Muesli with Mango" avg="5.0" base="Vegas" category="Fruits"/>
-							<DisheItem name="Avocado and Egg Sandwich" avg="4.0" base="Vegan Cafe" category="Sandwich"/>
-							<DisheItem name="Avocado Pesto Pasta" avg="5.0" base="Cafetaria" category="Pasta"/>
-							<DisheItem name="Burger with Hamon" avg="4.0" base="Beefer Club" category="Burger"/>
-							<DisheItem name="Greek Salad" avg="4.5" base="Deep Cafe" category="Salad"/>
-							<DisheItem name="Beef Steak" avg="4.5" base="Deep Cafe" category="Salad" />							
+						<h1 className="text-2xl font-normal leading-8 mb-5">
+							Popular dishes
+						</h1>
+						<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+							<DisheItem
+								name="Classic Caesar Salad"
+								avg="4.5"
+								base="Deep Cafe"
+								category="Salad"
+							/>
+							<DisheItem
+								name="Pizza Margherita"
+								avg="4.0"
+								base="Neopolitan"
+								category="Pizza"
+							/>
+							<DisheItem
+								name="Muesli with Mango"
+								avg="5.0"
+								base="Vegas"
+								category="Fruits"
+							/>
+							<DisheItem
+								name="Avocado and Egg Sandwich"
+								avg="4.0"
+								base="Vegan Cafe"
+								category="Sandwich"
+							/>
+							<DisheItem
+								name="Avocado Pesto Pasta"
+								avg="5.0"
+								base="Cafetaria"
+								category="Pasta"
+							/>
+							<DisheItem
+								name="Burger with Hamon"
+								avg="4.0"
+								base="Beefer Club"
+								category="Burger"
+							/>
+							<DisheItem
+								name="Greek Salad"
+								avg="4.5"
+								base="Deep Cafe"
+								category="Salad"
+							/>
+							<DisheItem
+								name="Beef Steak"
+								avg="4.5"
+								base="Deep Cafe"
+								category="Salad"
+							/>
 						</div>
 					</div>
 				</main>
 			</div>
-			<div className="w-3/12 bg-white ml-3 pt-5 px-10" id="Order">
+			<div className="w-full md:w-4/12 xl:w-3/12 bg-white ml-3 pt-5 md:px-5 xl:px-10" id="Order">
 				<div className="flex">
 					<div className="mr-5 bg-yellow-100 w-14 h-14 flex items-center justify-center relative rounded-lg">
-						<svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+						<svg
+							className="w-6 h-6 text-yellow-500"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+							></path>
 						</svg>
-						<h6 className="px-2 text-white rounded-lg absolute bottom-10 left-10 text-sm font-medium" style={{background:'#2eb82e'}}>4</h6>
+						<h6
+							className="px-2 text-white rounded-lg absolute bottom-10 left-10 text-sm font-medium"
+							style={{ background: "#2eb82e" }}
+						>
+							4
+						</h6>
 					</div>
 					<div className="flex items-center">
-						<Image src={avatar} alt="profile" width={50}  height={50}/>
+						<Image
+							src={avatar}
+							alt="profile"
+							width={50}
+							height={50}
+						/>
 						<h2 className="ml-3">Sarah James</h2>
 					</div>
 				</div>
 				<div className="mt-16">
 					<div className="flex justify-between text-lg">
 						<h1 className="font-medium">My Order</h1>
-						<svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+						<svg
+							className="w-6 h-6 text-yellow-500"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+							></path>
 						</svg>
 					</div>
 					<div className="mt-5 border-b-2 border-dashed pb-2">
-						<OrderItem number="1" dish="Greek Salad" price="34"/>
-						<OrderItem number="2" dish="Grilled Fish" price="52"/>
-						<OrderItem number="1" dish="Beef Steak" price="48"/>
-						<OrderItem number="1" dish="Ramen" price="29"/>
+						<OrderItem
+							number="1"
+							dish="Greek Salad"
+							price="34"
+						/>
+						<OrderItem
+							number="2"
+							dish="Grilled Fish"
+							price="52"
+						/>
+						<OrderItem
+							number="1"
+							dish="Beef Steak"
+							price="48"
+						/>
+						<OrderItem
+							number="1"
+							dish="Ramen"
+							price="29"
+						/>
 					</div>
 					<div className="mt-8">
 						<div className="flex items-center justify-between">
 							<div className="flex items-center">
 								<div className="mr-5 w-20 h-12 bg-yellow-100 flex items-center justify-center rounded-lg">
-									<svg className="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									<svg
+										className="w-7 h-7 text-yellow-500"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+										></path>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+										></path>
 									</svg>
 								</div>
 								<div className="text-sm font-medium">
-									<h4 className="leading-6">Delivery</h4>
-									<h4 className="text-yellow-400 opacity-75">30-40min</h4>
+									<h4 className="leading-6">
+										Delivery
+									</h4>
+									<h4 className="text-yellow-400 opacity-75">
+										30-40min
+									</h4>
 								</div>
 							</div>
-							<p className="text-sm font-medium opacity-50">CFA50</p>
+							<p className="text-sm font-medium opacity-50">
+								CFA50
+							</p>
 						</div>
 					</div>
 					<div className="mt-12 flex items-center justify-between font-medium">
 						<h3 className="leading-6">Total Amount:</h3>
-						<h3 className="text-2xl leading-8">CFA168</h3>
+						<h3 className="text-2xl leading-8">
+							CFA168
+						</h3>
 					</div>
 					<div className="mt-20 flex justify-center">
-						<button className="w-64 h-12 rounded-lg text-center text-white font-medium" style={{background:'#2eb82e'}}>Checkout</button>
+						<button
+							className="w-64 h-12 rounded-lg text-center text-white font-medium"
+							style={{ background: "#2eb82e" }}
+						>
+							Checkout
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-  );
+	);
 }

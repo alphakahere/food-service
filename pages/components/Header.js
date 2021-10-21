@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <header className="flex justify-between items-center">
-            <div className="flex items-center">
+        <header className="sm:flex justify-between items-center">
+            <div className="flex items-center justify-between">
                 <svg
                     className="w-8 h-8"
                     fill="none"
@@ -22,13 +22,15 @@ const Header = () => {
                     <span className="font-bold text-3xl">Order</span> Something
                 </h1>
             </div>
-            <div className="relative">
-                <input type="text" placeholder="Search"
-                    className="bg-gray-100 w-80 h-10 rounded-lg px-3 placeholder-gray-400 font-medium outline-none"
-                />
-                <svg className="w-5 h-5 absolute bottom-2 left-72 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
+            <div className="flex justify-center ">
+                <div className="relative mt-8 sm:mt-0 ">
+                    <input type="text" placeholder="Search"
+                        className="bg-gray-100 w-80 h-10 rounded-lg px-3 placeholder-gray-400 font-medium outline-none"
+                    />
+                    <svg className="w-5 h-5 absolute bottom-2 left-72 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
             </div>
         </header>
     )
