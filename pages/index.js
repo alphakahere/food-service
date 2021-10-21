@@ -6,8 +6,16 @@ import Category from "./components/Category";
 import avatar from "../public/assets/categories/avatar.png";
 import DisheItem from "./components/DisheItem";
 import OrderItem from "./components/OrderItem";
+import { useEffect } from "react";
 
 export default function Home() {
+	useEffect(() => {
+		const burger =document.getElementById('burger')
+		const order = document.getElementById('order')
+		burger.addEventListener('click', () => {
+			order.classList.toggle('hidden')
+		})
+	})
 	return (
 		<div className="relative md:flex">
 			<div className="w-full md:w-8/12 xl:w-9/12 bg-gray-50 px-10 pt-5 py-10">
@@ -138,7 +146,7 @@ export default function Home() {
 					</div>
 				</main>
 			</div>
-			<div className="w-full md:w-4/12 xl:w-3/12 bg-white ml-3 pt-5 md:px-5 xl:px-10" id="Order">
+			<div className="absolute  top-20 px-10 pb-2 z-50 md:block md:static w-full md:w-4/12 xl:w-3/12 bg-white ml-3 pt-5 md:px-5 xl:px-10 transition-all ease-in duration-300" id="order">
 				<div className="flex">
 					<div className="mr-5 bg-yellow-100 w-14 h-14 flex items-center justify-center relative rounded-lg">
 						<svg
